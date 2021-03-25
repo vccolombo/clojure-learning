@@ -16,10 +16,26 @@
 ;;   (def filtered (filter #(< % delim) lst))
 ;;   (doall (map println filtered)))
 
+;; (defn filter-array
+;;   [delim lst]
+;;   (def filtered (remove #(>= % delim) lst))
+;;   (doall (map println filtered)))
+
+;; (defn filter-array
+;;   [delim lst]
+;;   (as-> lst lst
+;;     (remove #(>= % delim) lst)
+;;     (doall (map println lst))))
+
+(defn realize-print
+  [lazy-lst]
+  (doall (map println lazy-lst)))
+
 (defn filter-array
   [delim lst]
-  (def filtered (remove #(>= % delim) lst))
-  (doall (map println filtered)))
+  (->> lst
+       (remove #(>= % delim))
+       (realize-print)))
 
 (defn -main
   [& args]
