@@ -4,4 +4,4 @@
 
 ## Tests
 
-This challenge has tests. Check [test](test/) folder
+I wrote tests for this challenge. Check [test](test/) folder.
