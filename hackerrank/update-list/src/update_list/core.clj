@@ -5,7 +5,7 @@
   [value]
   (if (neg? value)
     (* value -1)
-    (identity value)))
+    value))
 
 (defn absolute-elements
   [lst]

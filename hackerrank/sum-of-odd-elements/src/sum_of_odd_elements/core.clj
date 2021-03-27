@@ -7,7 +7,7 @@
    (fn [a b]
      (if (odd? b)
        (+ a b)
-       (identity a)))
+       a))
    0
    lst))
 
